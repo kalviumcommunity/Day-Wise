@@ -146,6 +146,36 @@ This way, the AI doesn’t just rely on general rules but **adapts its answers t
 
 ---
 
+## **Chain-of-Thought Prompting (Hidden/Silent Reasoning)**
+
+Chain-of-thought prompting encourages the model to perform internal, step-by-step reasoning before producing an answer.
+To keep responses concise and to avoid exposing sensitive intermediate reasoning, DayWise uses a safe pattern: the model reasons internally but only outputs the final plan.
+
+### **Chain-of-Thought–Inspired Prompt (Safe)**
+
+```
+Apply internal step-by-step reasoning to plan and verify a feasible day.
+Do not reveal your intermediate reasoning or calculations.
+
+Follow this internal sequence silently:
+1) Collect constraints (calendar events, priorities, health targets, budget limits)
+2) Allocate realistic time blocks and buffer time
+3) Check conflicts and adjust
+4) Add reminders and simple habit goals
+5) Validate that the plan fits within the day
+
+Output only the final result in this format:
+- Schedule (time blocks)
+- Reminders (time + purpose)
+- Health goals (water/sleep/mood)
+- Budget actions (limits or logs)
+Keep the output concise and actionable.
+```
+
+This approach improves planning quality and coherence (the model “thinks first”) while ensuring users receive clean, final answers without internal chains of reasoning.
+
+---
+
 ## **Scalability & Evaluation**
 
 * **Correctness:** Ensures AI responses are relevant based on user data (tasks, expenses, health logs).
