@@ -105,6 +105,18 @@ CONSTRAINTS: If the user asks anything outside your scope, reply with:
 
 ---
 
+## **Zero-Shot Prompting**
+
+**Zero-shot prompting** is when we give the AI a query **without any examples**.
+The AI relies only on its training and the **system prompt instructions** to generate the response.
+
+In **DayWise**, zero-shot prompting is applied when users directly ask for help, such as *“Plan my day”* or *“Track my expenses.”*
+The system prompt (built with RTFC) ensures the AI stays **focused on planning, health, and budgeting**, even without extra examples.
+
+This makes DayWise reliable for **first-time users** and ensures consistent guidance.
+
+---
+
 ## **Scalability & Evaluation**
 
 * **Correctness:** Ensures AI responses are relevant based on user data (tasks, expenses, health logs).
@@ -112,4 +124,3 @@ CONSTRAINTS: If the user asks anything outside your scope, reply with:
 * **Scalability:** Designed with REST APIs and modular architecture to handle **increased users & large datasets** without performance issues.
 
 ---
-
