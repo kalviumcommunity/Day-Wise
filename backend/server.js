@@ -4,6 +4,7 @@ import cors from "cors"
 import { GoogleGenerativeAI } from "@google/generative-ai"
 import { oneShotPrompt } from "./prompts/oneShotPrompt.js"
 import { multiShotPrompt } from "./prompts/multiShotPrompt.js"
+import { dynamicPrompt } from './prompts/dynamicPrompt.js';
 
 dotenv.config()
 const app = express()
@@ -12,6 +13,25 @@ app.use(express.json())
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" })
+
+app.post("/api/chat-dynamic", async (req, res) => {
+    const { userName, todayTasks, recentExpenses, healthLog, message: userMessage } = req.body
+
+    try {
+        const promptText = dynamicPrompt({
+            userName,
+            todayTasks,
+            recentExpenses,
+            healthLog,
+            userMessage
+        })
+        const result = await model.generateContent(promptText)
+        res.json({ reply: result.response.text() })
+    } catch (error) {
+        console.error(error)
+        res.status(500).json({ reply: "Error generating response" })
+    }
+})
 
 app.post("/api/chat-multishot", async (req, res) => {
     const userMessage = req.body.message
