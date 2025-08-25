@@ -178,16 +178,22 @@ This approach improves planning quality and coherence (the model “thinks first
 
 ## **Tokens and Tokenization**
 
-To make the system efficient and **monitor AI usage**, DayWise logs the **number of tokens used in each AI call**.
-After every request to the AI API, the backend prints the **prompt tokens, completion tokens, and total tokens** to the console/terminal.
+To ensure efficiency and transparency, DayWise tracks the **number of tokens used in every AI interaction**.  
+A **token** is a unit of text (such as a word or part of a word) that the AI model processes. Monitoring token usage is crucial because it directly impacts API costs, response limits, and system performance.
 
-This helps in:
+**How it works in DayWise:**
 
-* Tracking API costs
-* Debugging prompt length issues
-* Optimizing queries for efficiency
+- After each request to the AI API, the backend calculates and logs the **number of tokens in the prompt** before sending it to the model.
+- The token count is printed to the console/terminal for every API call, allowing developers to monitor and optimize prompt sizes.
+- This process helps prevent exceeding model token limits and keeps the application cost-effective.
 
-By monitoring token usage, we ensure DayWise remains **scalable, cost-effective, and optimized** for real-world use.
+**Benefits of Token Logging:**
+
+* **Cost Tracking:** Understand and control API usage costs, as most AI providers charge per token.
+* **Prompt Debugging:** Quickly identify if prompts are too long or inefficient, which can cause errors or increased latency.
+* **System Optimization:** Fine-tune prompts to maximize information within token limits, ensuring fast and relevant responses.
+
+By actively monitoring token usage, DayWise remains **scalable, reliable, and optimized** for real-world deployment, providing users with a seamless and cost
 
 ---
 

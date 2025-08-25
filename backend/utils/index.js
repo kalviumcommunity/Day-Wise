@@ -6,3 +6,7 @@ export const handleError = (error) => {
     console.error("An error occurred:", error);
     return { message: "An unexpected error occurred. Please try again later." };
 };
+
+export function countTokens(text) {
+    return text.trim().split(/\s+/).length;
+}
