@@ -1,0 +1,22 @@
+[
+    {
+        "input": "Plan my day with 2 meetings and gym.",
+        "expected": "• 9am: Meeting 1\n• 11am: Meeting 2\n• 6pm: Gym\n• Add reminders for each event"
+    },
+    {
+        "input": "Suggest a healthy breakfast.",
+        "expected": "• Oatmeal with fruits\n• Greek yogurt with berries\n• Whole grain toast"
+    },
+    {
+        "input": "How can I save ₹1000 this month?",
+        "expected": "• Track expenses\n• Limit eating out\n• Set a weekly spending limit"
+    },
+    {
+        "input": "Remind me to drink water.",
+        "expected": "• Set reminders every 2 hours to drink water"
+    },
+    {
+        "input": "Tell me a joke.",
+        "expected": "I'm designed only to help with planning, health, and budgeting."
+    }
+]
