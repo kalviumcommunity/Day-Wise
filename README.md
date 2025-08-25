@@ -176,6 +176,21 @@ This approach improves planning quality and coherence (the model “thinks first
 
 ---
 
+## **Tokens and Tokenization**
+
+To make the system efficient and **monitor AI usage**, DayWise logs the **number of tokens used in each AI call**.
+After every request to the AI API, the backend prints the **prompt tokens, completion tokens, and total tokens** to the console/terminal.
+
+This helps in:
+
+* Tracking API costs
+* Debugging prompt length issues
+* Optimizing queries for efficiency
+
+By monitoring token usage, we ensure DayWise remains **scalable, cost-effective, and optimized** for real-world use.
+
+---
+
 ## **Scalability & Evaluation**
 
 * **Correctness:** Ensures AI responses are relevant based on user data (tasks, expenses, health logs).
