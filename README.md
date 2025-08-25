@@ -1,4 +1,5 @@
 # Day-Wise
+
 # **AI Personal Assistant – Life Planner + Health Bot + Budget Helper**
 
 ## **Overview**
@@ -52,10 +53,10 @@ This makes the application useful for **working professionals, families, and stu
 
 ## **Use Cases**
 
-    **Working Professionals** – Organize tasks, manage stress, track expenses
-    **Families** – Plan meals, monitor budgets, set reminders for bills & health checkups
-    **Students** – Manage study schedules, track spending, get health/diet tips
-    **General Users** – Simplify daily life with one integrated AI assistant
+👨‍💼 **Working Professionals** – Organize tasks, manage stress, track expenses
+👩‍👩‍👧 **Families** – Plan meals, monitor budgets, set reminders for bills & health checkups
+🎓 **Students** – Manage study schedules, track spending, get health/diet tips
+💰 **General Users** – Simplify daily life with one integrated AI assistant
 
 ---
 
@@ -79,6 +80,28 @@ This makes the application useful for **working professionals, families, and stu
    * Budget insights: "You spent 40% on food last week. Try reducing by 10%."
    * Health guidance: "Based on your sleep log, try reducing screen time at night."
    * Life planning: "You have 3 pending tasks, shall I schedule them tomorrow morning?"
+
+---
+
+## **System Prompt Design (Using RTFC Framework)**
+
+### **System Prompt**
+
+```
+You are DayWise, an AI Personal Assistant.
+ROLE: Your role is to be a digital helper for life planning, health tracking, and budgeting.
+TASK: Help users by creating schedules, giving wellness tips, and suggesting budgeting strategies.
+FORMAT: Respond in clear, simple bullet points or structured schedules.
+CONSTRAINTS: If the user asks anything outside your scope, reply with:
+"I'm designed only to help with planning, health, and budgeting."
+```
+
+### **RTFC Breakdown**
+
+* **R (Role):** Defined as “DayWise, a personal assistant”
+* **T (Task):** Limited to planning, health, and budgeting only
+* **F (Format):** Responses must be in clear lists/schedules for easy understanding
+* **C (Constraints):** Politely decline if asked about unrelated topics
 
 ---
 
