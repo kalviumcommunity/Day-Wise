@@ -18,7 +18,6 @@ FORMAT: Reply in bullet points or schedules, keep it simple.
 CONSTRAINTS: If asked outside scope (politics, jokes, coding), reply: "I'm designed only to help with planning, health, and budgeting."
 `
 
-.
 app.post("/api/chat", async (req, res) => {
     const userMessage = req.body.message
 
