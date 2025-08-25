@@ -125,15 +125,24 @@ This helps the AI understand the **style, structure, and context** we expect in 
 
 In **DayWise**, multi-shot prompting is used when we want the AI to give **consistent responses across different categories** (planning, health, budgeting).
 
-For example, the system prompt includes **several sample interactions** showing how to:
-
-* Plan a user’s day with work + personal tasks
-* Suggest daily water intake and sleep goals
-* Give budgeting advice after analyzing expenses
-
-By giving these multiple demonstrations in the prompt, the AI learns the **pattern of responses** and follows the same structured style for new queries.
+By giving multiple demonstrations in the prompt, the AI learns the **pattern of responses** and follows the same structured style for new queries.
 
 This ensures **accuracy, consistency, and reliability** in DayWise’s guidance.
+
+---
+
+## **Dynamic Prompting**
+
+**Dynamic prompting** means **modifying the prompt in real-time** based on the user’s context, preferences, or data stored in the system.
+Instead of using a fixed instruction, the system **injects user-specific information** into the prompt before sending it to the AI.
+
+In **DayWise**, dynamic prompting is used to give **personalized responses**. For example:
+
+* If a user has logged **5 hours of sleep**, the prompt dynamically includes that info → AI suggests “Try increasing your sleep by 2 hours.”
+* If monthly expenses show **high spending on food**, the prompt includes that → AI responds with “Consider reducing eating out to save 15%.”
+* If tasks are pending, the system prompt dynamically lists them → AI suggests a schedule including those tasks.
+
+This way, the AI doesn’t just rely on general rules but **adapts its answers to the user’s real-time data**, making the assistant more practical and intelligent.
 
 ---
 
