@@ -28,6 +28,7 @@ This makes the application useful for **working professionals, families, and stu
 
   * Zero-shot prompting (general queries)
   * One-shot & Few-shot prompting (personalized responses)
+  * Multi-shot prompting (guided with multiple examples)
   * Chain-of-Thought reasoning (budget + health insights)
   * Dynamic prompting (context-based replies)
 
@@ -114,6 +115,25 @@ In **DayWise**, zero-shot prompting is applied when users directly ask for help,
 The system prompt (built with RTFC) ensures the AI stays **focused on planning, health, and budgeting**, even without extra examples.
 
 This makes DayWise reliable for **first-time users** and ensures consistent guidance.
+
+---
+
+## **Multi-Shot Prompting**
+
+**Multi-shot prompting** means providing the AI with **multiple examples of inputs and outputs** before asking the actual query.
+This helps the AI understand the **style, structure, and context** we expect in its answers.
+
+In **DayWise**, multi-shot prompting is used when we want the AI to give **consistent responses across different categories** (planning, health, budgeting).
+
+For example, the system prompt includes **several sample interactions** showing how to:
+
+* Plan a user’s day with work + personal tasks
+* Suggest daily water intake and sleep goals
+* Give budgeting advice after analyzing expenses
+
+By giving these multiple demonstrations in the prompt, the AI learns the **pattern of responses** and follows the same structured style for new queries.
+
+This ensures **accuracy, consistency, and reliability** in DayWise’s guidance.
 
 ---
 
